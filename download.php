@@ -6,11 +6,11 @@ if (isset($_POST['link'])) {
         die("Неверная ссылка");
     }
 
-    $apiUrl = "https://api.saveig.app/api/ajaxSearch";
+    $apiURL = "https://pikapi.cam/api/ajaxSearch";
     $postFields = http_build_query(["q" => $url]);
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $apiUrl);
+    curl_setopt($ch, CURLOPT_URL, $apiURL);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
